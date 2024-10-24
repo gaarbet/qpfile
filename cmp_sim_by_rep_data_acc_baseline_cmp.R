@@ -433,7 +433,11 @@ for(condition in simulation_conditions) {
       bias_alpha_proposed = bias(alpha_summary_p$mean, alpha)
     )
     #Save the replication results
-    saveRDS(replication_results, file = paste0("C:/Users/halo2/Desktop/GRA Dropbox/Box Sync/Manuscript/Model Comparison Simulation/cmp/data_gen_according_to_baseline_CMP/",
+    # saveRDS(replication_results, file = paste0("C:/Users/halo2/Desktop/GRA Dropbox/Box Sync/Manuscript/Model Comparison Simulation/cmp/data_gen_according_to_baseline_CMP/",
+    #                                            J, "_", I, "/results_", x, "_", J, "_", I, ".rds"))
+    #saveRDS(replication_results, file = paste0(getwd(), "/data/results_", J, "_", I, "_", x, ".rds"))
+    
+    saveRDS(replication_results, file = paste0(getwd(), "/data/",
                                                J, "_", I, "/results_", x, "_", J, "_", I, ".rds"))
     
     #condition_results[[x]] <- replication_results
